@@ -32,19 +32,49 @@
 }
 
 .result-item {
-    margin-bottom: 20px;
+    border:1px solid grey   ;
+    border-bottom : 0;
+    display: flex;
+    width: 100%;
 }
 
 .result-title {
     font-size: 22px;
+    padding:4px;
+    border-right: 1px solid grey    ;
+    width: 20%;
+    text-align: center;
 }
 
 .link-description {
     color: #444444;
     font-size: 15px;
+    padding:4px;
+     width: 60%;
 }
 
 .result-url {
     color: #006621;
     text-decoration: none;
+    padding:4px;
+    border-right: 1px solid grey    ;
+    width: 20%;
+    text-align: center;
+}
+
+.table-header-text{
+    font-weight: bold;
+    text-align: center;
+    width: 20%;
+    margin-bottom: 0px !important;
+    border-right: 1px solid grey    ;
+    padding: 4px;
+}
+.table-header-description{
+    font-weight: bold;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 0px !important;
+    padding:4px;
+    color: black;
 }

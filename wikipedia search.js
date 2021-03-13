@@ -21,8 +21,6 @@ function createAndAppendSearchResult(result) {
     titleEl.classList.add("result-title");
     resultItemEl.appendChild(titleEl);
 
-    let titleBreakEl = document.createElement("br");
-    resultItemEl.appendChild(titleBreakEl);
 
     let urlEl = document.createElement("a");
     urlEl.classList.add("result-url");
@@ -30,9 +28,6 @@ function createAndAppendSearchResult(result) {
     urlEl.target = "_blank";
     urlEl.textContent = link;
     resultItemEl.appendChild(urlEl);
-
-    let linkBreakEl = document.createElement("br");
-    resultItemEl.appendChild(linkBreakEl);
 
     let descriptionEl = document.createElement("p");
     descriptionEl.classList.add("link-description");
@@ -42,8 +37,33 @@ function createAndAppendSearchResult(result) {
     searchResultsEl.appendChild(resultItemEl);
 }
 
+function createAndAppendTableHeader(){
+
+
+    let headerEl = document.createElement("div");
+    headerEl.classList.add("result-item");
+
+    let titleEl = document.createElement("p");
+    titleEl.textContent = "Title";
+    titleEl.classList.add("table-header-text");
+    headerEl.appendChild(titleEl);
+
+    let urlEl = document.createElement("p");
+    urlEl.textContent = "Link";
+    urlEl.classList.add("table-header-text");
+    headerEl.appendChild(urlEl);
+
+    let descriptionEl = document.createElement("p");
+    descriptionEl.classList.add("table-header-description");
+    descriptionEl.textContent = "Description";
+    headerEl.appendChild(descriptionEl);
+
+    searchResultsEl.appendChild(headerEl);
+}
+
 function displayResults(searchResults) {
     spinnerEl.classList.add("d-none");
+    createAndAppendTableHeader()
 
     for (let result of searchResults) {
         createAndAppendSearchResult(result);
